@@ -1,0 +1,44 @@
+<!-- Meio (conteudo Principal)-->
+     <main class="containerMain">
+        <section>
+            <h2>
+                Conteudo
+            </h2>
+            <p>
+                Conteudo Principal da pagína
+            </p>
+        </section>
+        <article>
+            <h3>
+                Artigo
+            </h3>
+            <p>
+                Um texto explicativo aqui
+            </p>
+        </article>
+
+     </main>
+     <!-- Fim (Rodapé) -->
+      <footer class="area-footer">
+        <div class="footer-social">
+            <ul class="footer-list">
+                <li class="footer-instagram">
+                    <a href="#"></a>
+                    <img src="./assets/icons/icon-instagram.svg" alt="Instagram">
+                </li>
+                <li class="footer-youtube">
+                    <a href="#"></a>
+                    <img src="./assets/icons/icon-youtube.svg" alt="Youtube">
+                </li>
+                <li class="footer-linkedin">
+                    <a href="#"></a>
+                    <img src="./assets/icons/icon-linkedin.svg" alt="Linkedin">
+                </li>
+                <li class="footer-github">
+                    <a href="#"></a>
+                    <img src="./assets/icons/icon-github.svg" alt="Github">
+                </li>
+            </ul>
+                <p>&copy; 2025 Cortex Studio. Todos os direitos reservador</p>
+        </div>  
+      </footer>

@@ -1,0 +1,159 @@
+* {
+    margin: 0;/* Espaçamento | distancia da borda para fora*/
+    padding: 0;/* Espaçamento | distancia da borda para dentro*/
+    border: 0;/* Utiliza espaço interno mantem tamanho widht e height*/
+    box-sizing: border-box; 
+}
+body {
+    font-family: 'sodo-sans', sans-serif;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color:#1E1F26; /* Fundo total page */
+}
+/* fontes */
+@font-face{
+    font-family:'sodo-sans';
+    src: url('/assets/fonts/sodo-sans/SoDoSans-Regular.woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Melhora performance de carregamento*/
+}
+/* Deixar area de navegação fixa na tela */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Para ficar acima de outros elementos */
+    border-bottom: 1px solid #3fff05; /* border-bottom 1px solid #ccc  + box-shadow:  0 6px 6px -6px  #222 borda com sombras no header*/
+    background-color: #131417; /* Fundo area-head */
+  /*box-shadow: 0 1px 10px -6px  #ffffff; */
+}
+/* Cabeçalho - Header */
+.area-header {   
+    height: 100px;
+    display: flex;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.area-logo {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.area-logo-img {
+    width: 80px;
+    height: 80%;
+    border-radius: 100%; 
+}
+.area-logo-img:hover {
+    transform: scale(1.15) translateY(1px);
+} 
+.area-nav{
+    height: 100%;
+    flex: 1;
+}
+.nav-list {
+    margin-left: 80px;
+    height: 100%;
+    width: 120%;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav-list-item {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.7;
+}
+.nav-list-item:hover a{
+    color: #3fff05;
+    cursor:pointer;
+}
+.nav-list-item a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+}
+/* Area fale conosco */
+.area-contato-btn{
+    height: 100%;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.area-contato-btn a {
+    padding: 8px 12px;
+    background-color: #5ead46;
+    border-radius: 10px;
+    font-weight:lighter;
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: #000000;
+    white-space: nowrap ;
+    text-decoration: none;
+}
+.area-contato-btn:hover a{
+    background-color: #5ead46;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 1px 10px #5ead46;
+}
+/* Area encontre nossa loja */
+.nav-store-location {
+    width: 160px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.store-location{
+    height: 30px;
+    width: 140px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    white-space: nowrap;
+}
+.nav-store-location:hover a{
+    color: #3fff05;
+    cursor:pointer;
+}
+/* Estilos do submenu */
+.submenu{
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 225px;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 100;
+}
+.submenu li a {
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-radius: 10px;
+}
+.submenu li a:hover{
+    background: #000000ab;
+}
+/* Mostrar submenu ao passar o mouse */
+.nav-list-item:hover .submenu{
+    display: block;
+}
+/* Indicador visual de submenu */
+.nav-list-item.has-submenu > a::after{
+    content: "▼";
+    font-size: 10px;
+    color: #ffffff;
+}
